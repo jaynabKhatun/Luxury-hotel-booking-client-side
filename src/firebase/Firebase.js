@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCHfPUaoCfzJEOj_mQnO8-Lo9YPVyaafSQ",
-    authDomain: "herritage-1b537.firebaseapp.com",
-    projectId: "herritage-1b537",
-    storageBucket: "herritage-1b537.appspot.com",
-    messagingSenderId: "760701610608",
-    appId: "1:760701610608:web:4757d74206cee6dac0a2b5"
+    apiKey: import.meta.env.VITE_apiKey,
+    authDomain: import.meta.env.VITE_authDomain,
+    projectId: import.meta.env.VITE_projectId,
+    storageBucket: import.meta.env.VITE_storageBucket,
+    messagingSenderId: import.meta.env.VITE_messagingSenderId,
+    appId: import.meta.env.VITE_appId
 };
 
 // Initialize Firebase
