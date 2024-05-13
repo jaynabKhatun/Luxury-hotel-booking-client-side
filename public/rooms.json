@@ -1,6 +1,5 @@
 [
     {
-        "id": 1,
         "name": "Cozy Single Room",
         "description": "Indulge in the comfort of our Cozy Single Room. This intimate space features a comfortable bed, perfect for a solo traveler seeking relaxation. Enjoy modern amenities and a welcoming ambiance during your stay. Ideal for short stays or solo getaways.",
         "price_per_night": 500,
@@ -10,7 +9,6 @@
         "special_offers": "10% off for bookings of 3 nights or more"
     },
     {
-        "id": 2,
         "name": "Spacious Double Room",
         "description": "Escape to our Spacious Double Room, designed for comfort and convenience. Featuring a queen-sized bed and a private balcony, it offers a tranquil retreat for couples or solo travelers seeking extra space. Unwind and enjoy the modern comforts of home away from home.",
         "price_per_night": 80,
@@ -20,7 +18,6 @@
         "special_offers": ""
     },
     {
-        "id": 3,
         "name": "Luxurious Suite",
         "description": "Experience luxury in our Luxurious Suite, where elegance meets comfort. With separate living and sleeping areas, it's perfect for a romantic getaway or a special occasion. Indulge in refined amenities and personalized service, ensuring a memorable stay.",
         "price_per_night": 150,
@@ -30,7 +27,6 @@
         "special_offers": ""
     },
     {
-        "id": 4,
         "name": "Charming Twin Room",
         "description": "Discover the charm of our Charming Twin Room, offering a cozy retreat with garden views. With two comfortable beds, it's ideal for friends or family traveling together. Enjoy complimentary breakfast and modern amenities for a delightful stay.",
         "price_per_night": 90,
@@ -40,7 +36,6 @@
         "special_offers": "Free breakfast included"
     },
     {
-        "id": 5,
         "name": "Family-Friendly Apartment",
         "description": "Treat your family to a memorable stay in our Family-Friendly Apartment. With multiple bedrooms, a fully equipped kitchen, and a spacious living room, it offers ample space for relaxation and bonding. Kids stay for free, making it perfect for family vacations.",
         "price_per_night": 200,
@@ -50,7 +45,6 @@
         "special_offers": "Children stay for free"
     },
     {
-        "id": 6,
         "name": "Elegant Executive Room",
         "description": "Experience luxury in our Elegant Executive Room, designed for discerning travelers. With a king-sized bed, workspace, and modern amenities, it offers a perfect blend of comfort and functionality. Ideal for business travelers or those seeking a touch of luxury.",
         "price_per_night": 120,
@@ -60,7 +54,6 @@
         "special_offers": ""
     },
     {
-        "id": 7,
         "name": "Rustic Cabin",
         "description": "Immerse yourself in nature in our Rustic Cabin, nestled in the woods. Perfect for nature lovers and adventurers, it offers a cozy retreat with modern comforts. Enjoy the tranquility of the surroundings and take advantage of special offers for last-minute bookings.",
         "price_per_night": 70,
@@ -70,7 +63,6 @@
         "special_offers": "20% off for last-minute bookings"
     },
     {
-        "id": 8,
         "name": "Modern Loft",
         "description": "Experience urban living in our Modern Loft, offering panoramic city views and contemporary design. With an open floor plan, it's perfect for travelers seeking style and sophistication. Enjoy a luxurious stay with modern amenities and personalized service.",
         "price_per_night": 180,
@@ -80,7 +72,6 @@
         "special_offers": ""
     },
     {
-        "id": 9,
         "name": "Historic Guesthouse",
         "description": "Step back in time in our Historic Guesthouse, filled with charm and character. Featuring antique furnishings and a serene garden, it offers a unique stay experience. Ideal for history enthusiasts or those seeking a tranquil escape from the modern world.",
         "price_per_night": 100,

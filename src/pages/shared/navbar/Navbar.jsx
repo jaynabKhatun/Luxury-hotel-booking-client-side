@@ -32,110 +32,37 @@ const Navbar = () => {
     }
 
     return (
-        // <div className='navbar  shadow-2xl bg-base-200 bg'>
-        //     <div className='flex-1'>
-        //         <div className='flex gap-2 items-center'>
-        //             <img className='w-auto h-7' src={logo} alt='' />
+        <div className='navbar  shadow-2xl bg-base-200 bg'>
+            <div className='flex-1'>
+                <div className='flex gap-2 items-center'>
+                    <img className='w-auto h-7' src={logo} alt='' />
 
-        //         </div>
-        //     </div>
-        //     <div className='flex-none'>
-        //         <ul className='menu menu-horizontal px-1'>
-        //             <li>
-        //                 <NavLink to={'/'}>Home</NavLink>
-        //             </li>
-
-        //             {
-        //                 user && <li>
-        //                     <NavLink to={'/rooms'}>Rooms</NavLink>
-        //                 </li>
-        //             }
-        //             {
-        //                 user && <li>
-        //                     <NavLink to={'/myBookings'}>My Bookings</NavLink>
-        //                 </li>
-        //             }
-        //             {
-        //                 !user && <li>
-        //                     <NavLink to={'/login'}>Login</NavLink>
-        //                 </li>
-        //             }
-        //         </ul>
-
-        //         {
-        //             user && <div className='dropdown dropdown-end z-50'>
-        //                 <div
-        //                     tabIndex={0}
-        //                     role='button'
-        //                     className='btn btn-ghost btn-circle avatar'
-        //                 >
-        //                     <div className='w-10 rounded-full' title=''>
-        //                         <img
-        //                             referrerPolicy='no-referrer'
-        //                             alt='User Profile Photo'
-        //                             src=''
-        //                         />
-        //                     </div>
-        //                 </div>
-        //                 <ul
-        //                     tabIndex={0}
-        //                     className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'
-        //                 >
-        //                     <li>
-        //                         <div className='justify-between'>Add Job</div>
-        //                     </li>
-        //                     <li>
-        //                         <div>My Posted Jobs</div>
-        //                     </li>
-        //                     <li>
-        //                         <div>My Bids</div>
-        //                     </li>
-        //                     <li>
-        //                         <div>Bid Requests</div>
-        //                     </li>
-        //                     <li className='mt-2'>
-        //                         <button className='bg-gray-200 block text-center'>Logout</button>
-        //                     </li>
-        //                 </ul>
-        //             </div>
-        //         }
-        //     </div>
-        // </div>
-
-
-
-        <div className="hero md:min-h-screen relative   " data-aos="zoom-in" style={{ backgroundImage: 'url(https://i.ibb.co/sFnPWYY/lotus-design-n-print-Wgk-A3-CSFrjc-unsplash.jpg)' }} >
-            <div className='navbar bg-transparent absolute top-1 p-4   shadow-2xl bg-base-100 bg' data-aos="zoom-out-down">
-                <div className='flex-1'>
-                    <div className='flex gap-2 items-center'>
-                        <img className='w-auto h-7' src={logo} alt='' />
-
-                    </div>
                 </div>
-                <div className='flex-none'>
-                    <ul className='menu menu-horizontal px-1'>
-                        <li>
-                            <NavLink to={'/'}>Home</NavLink>
-                        </li>
-
-                        {
-                            user && <li>
-                                <NavLink to={'/rooms'}>Rooms</NavLink>
-                            </li>
-                        }
-                        {
-                            user && <li>
-                                <NavLink to={'/myBookings'}>My Bookings</NavLink>
-                            </li>
-                        }
-                        {
-                            !user && <li>
-                                <NavLink to={'/login'}>Login</NavLink>
-                            </li>
-                        }
-                    </ul>
+            </div>
+            <div className='flex-none'>
+                <ul className='menu menu-horizontal px-1'>
+                    <li>
+                        <NavLink to={'/'}>Home</NavLink>
+                    </li>
 
                     {
+                        user && <li>
+                            <NavLink to={'/rooms'}>Rooms</NavLink>
+                        </li>
+                    }
+                    {
+                        user && <li>
+                            <NavLink to={'/myBookings'}>My Bookings</NavLink>
+                        </li>
+                    }
+                    {
+                        !user && <li>
+                            <NavLink to={'/login'}>Login</NavLink>
+                        </li>
+                    }
+                </ul>
+
+                {
                         user && <div className='dropdown dropdown-end z-50'>
                             <div
                                 tabIndex={0}
@@ -174,27 +101,12 @@ const Navbar = () => {
                             </ul>
                         </div>
                     }
-                </div>
             </div>
+        </div>
 
 
 
-            <div className="card   md:w-full mt-10 md:max-w-screen-sm shadow-2xl md:border bg-transparent " data-aos="flip-left"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="4000"
-
-            >
-
-                <img className="md:h-20" src={logo} alt="" />
-                <h1 className="font-mim text-3xl text-center text-white">Your Next Destination</h1>
-
-
-
-
-            </div >
-
-
-        </div >
+        
     );
 };
 

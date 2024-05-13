@@ -12,11 +12,11 @@ const SingleRoom = ({ room }) => {
             once: false,
         })
     }, [])
-    const { image, availability, name, price_per_night } = room;
+    const { _id,image, availability, name, price_per_night } = room;
 
     return (
 
-        <Link  className="flex flex-col  mt-8 font-mim items-center justify-center w-full max-w-sm mx-auto" data-aos="flip-left"
+        <Link to={`/roomDetailsPage/${_id}`}  className="flex flex-col  mt-8 font-mim items-center justify-center w-full max-w-sm mx-auto" data-aos="flip-left"
             data-aos-easing="ease-out-cubic"
             data-aos-duration="3000">
             <div className="w-full h-64 bg-gray-300 bg-center bg-cover rounded-lg shadow-md" >

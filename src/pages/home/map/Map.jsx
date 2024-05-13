@@ -33,20 +33,24 @@ const Map = () => {
     return (
 
         <div>
-            <h1 className='text-4xl text-center mt-20 mb-6 font-mim font-bold' data-aos="fade-up"> Our Location</h1>
+            <h1 className='text-4xl text-center mt-20 mb-6 font-mim font-bold' data-aos="zoom-in"> Our Location</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
 
-                <div className='flex justify-center items-center' data-aos="fade-up-left">
+                <div className='flex justify-center items-center' data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="3000">
 
 
 
-                    <img className='border-8'  src={mappic} alt="" />
+                    <img className='border-8' src={mappic} alt="" />
 
 
                 </div>
 
 
-                <div className='border-8  shadow-2xl' data-aos="fade-down-right" style={{ height: '600px', width: '100%' }}>
+                <div className='border-8  shadow-2xl' data-aos="flip-right"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="4000" style={{ height: '600px', width: '100%' }}>
                     <GoogleMapReact
                         bootstrapURLKeys={{ key: '' }}
                         defaultCenter={defaultProps.center}
