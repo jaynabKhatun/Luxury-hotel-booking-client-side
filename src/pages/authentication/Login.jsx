@@ -1,4 +1,4 @@
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link,  useNavigate } from "react-router-dom";
 import { useContext, useEffect } from 'react'
 import logo from '../../../src/assets/logo/logo.svg'
 import AOS from 'aos';
