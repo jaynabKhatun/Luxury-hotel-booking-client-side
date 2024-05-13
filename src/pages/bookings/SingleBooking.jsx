@@ -1,13 +1,17 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
-
-const SingleBooking = ({ booking }) => {
-
+import propTypes from 'prop-types';
 
 
+const SingleBooking = ({ booking,handleCancelBooking }) => {
     console.log(booking);
-    const { images, service_name, date, price, room_size, email } = booking;
+
+
+
+
+    const { images, service_name, _id, date, price, room_size, email
+    } = booking;
     useEffect(() => {
         AOS.init({
             duration: 2000,
@@ -31,12 +35,19 @@ const SingleBooking = ({ booking }) => {
                     <p className="badge badge-secondary hover:scale-105 text-white p-4 font-bold" data-aos="fade-up-left">Price : ${email}</p>
                     <div className="card-actions justify-end">
                         <button className="btn btn-primary" data-aos="fade-up-left">Update</button>
-                        <button className="btn btn-error"  data-aos="fade-down-right">Cancel</button>
+
+                        <button onClick={() => handleCancelBooking(_id)} className="btn btn-error" data-aos="fade-down-right">Cancel</button>
                     </div>
                 </div>
             </div>
         </div>
     );
 };
+
+SingleBooking.propTypes = {
+    booking: propTypes.object.isRequired,
+    handleCancelBooking: propTypes.func.isRequired,
+};
+
 
 export default SingleBooking;
