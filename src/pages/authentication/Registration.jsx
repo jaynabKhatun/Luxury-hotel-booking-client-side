@@ -1,11 +1,16 @@
-import { useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { useContext, useEffect } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from '../../assets/logo/logo.svg'
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { AuthContext } from "../../provider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Registration = () => {
+
+    const { createUser, updateUserProfile, setUser } = useContext(AuthContext);
+    const navigate = useNavigate()
     useEffect(() => {
         AOS.init({
             duration: 2000,
@@ -14,8 +19,11 @@ const Registration = () => {
     }, [])
 
 
-    const handleRegister = e => {
-        e.preventDefault();
+
+
+    // create new user
+    const handleSignUp = async e => {
+        e.preventDefault()
         const form = e.target
         const name = form.name.value;
         const photo = form.photo.value;
@@ -23,8 +31,39 @@ const Registration = () => {
         const password = form.password.value;
         const newUser = { name, photo, email, password };
         console.log(newUser);
+        if (password.length < 6) {
+            toast.error('Password must be at least 6 characters')
+            return
+        } else if (!/^(?=.*[a-z])(?=.*[A-Z]).+$/.test(password)) {
+            return toast.error('Password must contain at least one uppercase and lowercase letter')
+        }
 
+
+
+        try {
+            //2. User Registration
+            const result = await createUser(email, password)
+
+            await updateUserProfile(name, photo)
+            // Optimistic UI Update
+            setUser({ ...result?.user, photoURL: photo, displayName: name })
+
+            navigate('/')
+            toast.success('Signup Successful')
+        } catch (err) {
+            console.log(err)
+            toast.error(err?.message)
+        }
     }
+
+
+
+
+
+
+
+
+
 
 
     return (
@@ -38,7 +77,7 @@ const Registration = () => {
                 <img className="h-24 mt-4" src={logo} alt="" />
                 <h1 className="font-mim text-2xl text-center">Register</h1>
 
-                <form onSubmit={handleRegister}
+                <form onSubmit={handleSignUp}
 
                     className="card-body " >
 

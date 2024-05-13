@@ -1,12 +1,17 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import Marquee from "react-fast-marquee";
+import { AuthContext } from "../../provider/AuthProvider";
+
+
+import toast from "react-hot-toast";
 
 
 
 const RoomDetailsPage = () => {
+    const { user } = useContext(AuthContext)
     useEffect(() => {
         AOS.init({
             duration: 1200,
@@ -14,13 +19,61 @@ const RoomDetailsPage = () => {
         })
     }, [])
     const room = useLoaderData();
-    const { image, description, name, special_offers, availability, room_size, price_per_night } = room;
+    const { image, description, _id, name, special_offers, availability, room_size, price_per_night } = room;
+    const navigate = useNavigate();
+
+    const handleBooking = (e) => {
+        e.preventDefault()
+        const form = e.target
+        const price = form.price.value;
+        const room_size = form.room_size.value;
+        const availability = form.availability.value;
+        const date = form.date.value;
+        const email = user?.email;
+
+        const newBooking = {
+            price, room_size, availability, date, email,
+            service_id: _id,
+            images: image,
+            service_name: name
+        };
+        console.log(newBooking);
+
+
+        //insert new booking on mongodb
+
+        fetch('http://localhost:5000/bookings', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newBooking)
+        })
+            .then(res => res.json())
+
+            .then(data => {
+                if (data.insertedId) {
+                    toast.success('Booking Successfull')
+                }
+                navigate('/')
+            })
+
+
+    }
+
+
+
+
+
+
+
+
     return (
 
         <div>
             <Marquee direction="left" speed={100} pauseOnHover={true}>
                 <div>
-                    <h2 className="text-center font-serif text-3xl tracking-wider  font-bold">special_offers: {special_offers}
+                    <h2 className="text-center text-red-600  font-serif text-3xl tracking-wider  font-bold">Special Offers Here : <span className="text-black">{special_offers}</span>
                     </h2>
 
                 </div>
@@ -29,20 +82,24 @@ const RoomDetailsPage = () => {
 
             <div className="md:min-h-[calc(100vh-70px)] md:flex items-center  ">
 
-                <div className="grid md:grid-cols-2 md:gap-10">
+                <div className="grid md:grid-cols-2 md:gap-10 ">
                     <div className="w-2/2">
                         <img src={image} alt="" />
 
                     </div>
 
+
                     <div className="flex justify-center items-center">
+
                         <h1 className="font-mim mt-6 text-2xl ">{description}</h1>
+
                     </div>
                 </div>
             </div>
 
             <div className="grid  grid-cols-1 md:grid-cols-2 md:gap-10 p-4 md:-mt-20">
-                <div className="md:h-[500px] ">
+
+                <div className="md:h-[500px]  ">
                     <section className="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
                         <h2 className="text-lg font-semibold text-gray-700 capitalize dark:text-white">Give Review</h2>
 
@@ -76,18 +133,68 @@ const RoomDetailsPage = () => {
                     </section>
 
                 </div>
-                <div className="bg-base-200 p-8 relative" >
+
+                <div className="bg-base-200 p-8 relative " style={{ backgroundImage: 'url(https://i.ibb.co/0Bs8b6W/photo-1618220048045-10a6dbdf83e0.jpg)' }} >
+                    <h1 className="text-center font-mim text-lg ">Book Your Room</h1>
+                    <h1 className="text-2xl font-mim text-center font-bold">{name}</h1>
 
 
-                    <h1 className="text-center font-mim  text-2xl font-bold p-4">{name} <div className="badge badge-primary p-4 ml-6 ">{availability}</div></h1>
-                    <h1 className="p-8 font-mim text-xl">{description}</h1>
+                    <form onSubmit={handleBooking}
 
-                    <div className="flex justify-center">
-                        <h1 className="font-bold text-lg ">Room Size: <span className="text-2xl text-black">{room_size}</span></h1>
+                        className="container flex flex-col mx-auto space-y-12">
 
-                    </div>
-                    <h1 className="flex justify-center mt-4 font-bold text-lg">Price per night:  <span className="text-2xl text-black">{price_per_night}$ </span></h1>
-                    <div className="flex justify-end absolute bottom-6 right-4">  <button className="px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">book now</button></div>
+                        <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-50">
+
+                            <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-4">
+
+
+                                <div className="col-span-full sm:col-span-3">
+                                    <label htmlFor=" item_name" className="text-sm"> Price per night</label>
+                                    <input id="price" name='price' type="text" defaultValue={price_per_night} className="w-full rounded-md border-b-2 border-black shadow-xl p-2" />
+                                </div>
+
+
+
+                                <div className="col-span-full sm:col-span-3">
+                                    <label htmlFor="price" className="text-sm">Room size
+                                    </label>
+                                    <input name='room_size' type="text" defaultValue={room_size} className="w-full rounded-md border-b-2 border-black shadow-xl p-2" />
+                                </div>
+                                <div className="col-span-full sm:col-span-3">
+                                    <label htmlFor="price" className="text-sm">availability
+                                    </label>
+                                    <input name='availability' type="text" defaultValue={availability} className="w-full rounded-md border-b-2 border-black shadow-xl p-2" />
+                                </div>
+                                <div className="col-span-full sm:col-span-3">
+                                    <label htmlFor="price" className="text-sm">Pick a date
+                                    </label>
+                                    <input name='date' type="date" required className="w-full rounded-md border-b-2 border-black shadow-xl p-2" />
+                                </div>
+
+
+
+                                <div className="col-span-full ">
+                                    <label htmlFor="Name" className="text-sm">email
+                                    </label>
+                                    <input name='email' type="text" defaultValue={user?.email} className="w-full rounded-md border-b-2 border-black shadow-xl p-2" />
+                                </div>
+
+
+                                <div className="col-span-full  ">
+
+
+                                    <input value="Book" type="submit" className="w-full btn  font-bold  shadow-xl p-2" />
+
+
+
+                                </div>
+                            </div>
+
+
+                        </fieldset>
+
+                    </form>
+
 
 
                 </div>
