@@ -52,7 +52,7 @@ const Navbar = () => {
                     }
                     {
                         user && <li>
-                            <NavLink to={'/myBookings'}>My Bookings</NavLink>
+                            <NavLink to={'/bookings'}>My Bookings</NavLink>
                         </li>
                     }
                     {

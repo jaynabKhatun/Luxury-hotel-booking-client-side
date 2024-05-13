@@ -5,6 +5,8 @@ import Login from "../pages/authentication/Login";
 import Registration from "../pages/authentication/Registration";
 import RoomDetailsPage from "../pages/roomDetailsPage/RoomDetailsPage";
 import ErrorPage from "../pages/errorPage/ErrorPage";
+import Bookings from "../pages/bookings/Bookings";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
 
@@ -23,6 +25,10 @@ const router = createBrowserRouter([
                 element: <RoomDetailsPage></RoomDetailsPage>,
                 loader: ({ params }) => fetch(`http://localhost:5000/rooms/${params.id}`)
             },
+            {
+                path: '/bookings',
+                element: <PrivateRoutes><Bookings></Bookings></PrivateRoutes>
+            }
 
         ],
 

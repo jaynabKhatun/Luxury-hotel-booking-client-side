@@ -6,7 +6,8 @@ import Marquee from "react-fast-marquee";
 import { AuthContext } from "../../provider/AuthProvider";
 
 
-import toast from "react-hot-toast";
+
+import Swal from "sweetalert2";
 
 
 
@@ -52,10 +53,24 @@ const RoomDetailsPage = () => {
             .then(res => res.json())
 
             .then(data => {
+
                 if (data.insertedId) {
-                    toast.success('Booking Successfull')
+                    Swal.fire({
+                        icon:'success',
+                        title: 'Your Booking is Successful',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                    navigate('/')
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Something went wrong!',
+                        footer: '<a href>Why do I have this issue?</a>'
+                    })
                 }
-                navigate('/')
+
             })
 
 
