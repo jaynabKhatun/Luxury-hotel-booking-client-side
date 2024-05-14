@@ -56,7 +56,7 @@ const RoomDetailsPage = () => {
 
                 if (data.insertedId) {
                     Swal.fire({
-                        icon:'success',
+                        icon: 'success',
                         title: 'Your Booking is Successful',
                         showConfirmButton: false,
                         timer: 1500
@@ -113,7 +113,7 @@ const RoomDetailsPage = () => {
             </div>
 
             <div className="grid  grid-cols-1 md:grid-cols-2 md:gap-10 p-4 md:-mt-20">
-
+                {/* review section */}
                 <div className="md:h-[500px]  ">
                     <section className="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
                         <h2 className="text-lg font-semibold text-gray-700 capitalize dark:text-white">Give Review</h2>
@@ -148,7 +148,7 @@ const RoomDetailsPage = () => {
                     </section>
 
                 </div>
-
+                {/* booking form section */}
                 <div className="bg-base-200 p-8 relative " style={{ backgroundImage: 'url(https://i.ibb.co/0Bs8b6W/photo-1618220048045-10a6dbdf83e0.jpg)' }} >
                     <h1 className="text-center font-mim text-lg ">Book Your Room</h1>
                     <h1 className="text-2xl font-mim text-center font-bold">{name}</h1>

@@ -58,15 +58,21 @@ const Bookings = () => {
 
     }
 
+   
+
     return (
         <div className="min-h-[calc(100vh-88px)]">
             <button className="badge badge-warning mt-3 text-white font-bold p-3">Total Bookings: {bookings.length}</button>
             <div >
                 {
                     bookings.map(booking =>
-                        <SingleBooking key={booking._id}
+                        <SingleBooking
+                            key={booking._id}
                             handleCancelBooking={handleCancelBooking}
-                            booking={booking}>
+                            booking={booking}
+                          
+                        >
+
 
                         </SingleBooking>)
                 }
@@ -74,5 +80,6 @@ const Bookings = () => {
         </div>
     );
 };
+
 
 export default Bookings;

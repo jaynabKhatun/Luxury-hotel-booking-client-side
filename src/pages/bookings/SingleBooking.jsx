@@ -2,9 +2,10 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import propTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 
-const SingleBooking = ({ booking,handleCancelBooking }) => {
+const SingleBooking = ({ booking, handleCancelBooking }) => {
     console.log(booking);
 
 
@@ -34,7 +35,8 @@ const SingleBooking = ({ booking,handleCancelBooking }) => {
                     <p className="badge badge-secondary hover:scale-105 text-white p-4 font-bold" data-aos="fade-up-right">Price : ${room_size}</p>
                     <p className="badge badge-secondary hover:scale-105 text-white p-4 font-bold" data-aos="fade-up-left">Price : ${email}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary" data-aos="fade-up-left">Update</button>
+
+                        <Link to={`/updateBookings/${_id}`}><button className="btn btn-primary" data-aos="fade-up-left">Update</button></Link>
 
                         <button onClick={() => handleCancelBooking(_id)} className="btn btn-error" data-aos="fade-down-right">Cancel</button>
                     </div>
@@ -47,6 +49,7 @@ const SingleBooking = ({ booking,handleCancelBooking }) => {
 SingleBooking.propTypes = {
     booking: propTypes.object.isRequired,
     handleCancelBooking: propTypes.func.isRequired,
+    handleUpdateBooking: propTypes.func.isRequired,
 };
 
 
