@@ -1,4 +1,4 @@
-import { Link,  useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useEffect } from 'react'
 import logo from '../../../src/assets/logo/logo.svg'
 import AOS from 'aos';
@@ -9,9 +9,13 @@ import toast from "react-hot-toast";
 
 
 const Login = () => {
-    const navigate = useNavigate()
+
 
     const { signIn, signInWithGoogle } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate()
+
+
 
 
     useEffect(() => {
@@ -32,13 +36,14 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 console.log(result.user)
-
-                navigate('/')
-
                 toast.success('Login Successfull')
+
+                navigate(location?.state ? location?.state : '/')
+
+
             })
             .catch(error => {
-                console.log(error.message)
+
                 toast.error(error.message)
             })
 
