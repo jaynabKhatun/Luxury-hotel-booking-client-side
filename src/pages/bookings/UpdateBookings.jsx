@@ -68,7 +68,7 @@ const UpdateBookings = () => {
     }
 
     return (
-        <div className="bg-base-200 p-8 relative min-h-[calc(100vh-80px)] bg-no-repeat bg-cover " style={{ backgroundImage: 'url(https://i.ibb.co/WD8HbCq/28417165.jpg) ' }} >
+        <div className="bg-base-200 p-8 relative min-h-[calc(100vh-80px)] mt-4 mb-8 bg-no-repeat bg-cover " style={{ backgroundImage: 'url(https://i.ibb.co/WD8HbCq/28417165.jpg) ' }} >
             <h1 className="text-center font-mim text-2xl " data-aos="zoom-in-up">Update Your Room</h1>
             <img className="container mx-auto h-16" src={logo} alt="" data-aos="zoom-in-down" />
             <h1 className="text-2xl font-mim text-center font-bold"  >{name}</h1>
@@ -78,16 +78,16 @@ const UpdateBookings = () => {
 
                 className="container  flex flex-col mx-auto space-y-12 mt-10">
 
-                <fieldset className="grid  font-mim font-bold  text-xl grid-cols-2 gap-6 p-6 rounded-md shadow-sm ">
+                <fieldset className="grid  font-mim font-bold  text-xl md:grid-cols-2 gap-6 p-6 rounded-md shadow-sm ">
 
-                    <div className="grid grid-cols-6 gap-4  lg:col-span-4">
+                    <div className="grid grid-cols-6 gap-4  ">
 
                         <div className="col-span-full " data-aos="zoom-in-up">
                             <label htmlFor="email" className="text-lg text-white">email
                             </label>
                             <input name='email' type="email" defaultValue={user?.email} className="w-full rounded-md border-b-2 border-black shadow-xl p-2" />
                         </div>
-                        <div className="col-span-2 " data-aos="zoom-in-up">
+                        <div className="col-span-full " data-aos="zoom-in-up">
                             <label className="text-lg text-white"> Service name
                             </label>
                             <input name='service_name' type="text" defaultValue={service_name} className="w-full rounded-md border-b-2 border-black shadow-xl p-2" />

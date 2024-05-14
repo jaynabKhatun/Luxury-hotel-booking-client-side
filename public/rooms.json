@@ -79,5 +79,104 @@
         "availability": "Available",
         "image": "https://i.ibb.co/s50k9HF/8a892fb7.jpg",
         "special_offers": ""
+    },
+    {
+        "name": "Cozy Single Room",
+        "description": "Indulge in the comfort of our Cozy Single Room. This intimate space features modern amenities and a serene ambiance, perfect for a solo traveler.",
+        "price_per_night": 500,
+        "room_size": "Single",
+        "availability": "Available",
+        "image": "https://i.ibb.co/NVYYG1m/modern-cozy-single-bedroom-interior-design-54.jpg",
+        "special_offer": "10% off for bookings of 3 nights or more"
+    },
+    {
+        "name": "Deluxe Double Room",
+        "description": "Experience luxury in our Deluxe Double Room, featuring elegant decor and spacious accommodation for a comfortable stay.",
+        "price_per_night": 800,
+        "room_size": "Double",
+        "availability": "Available",
+        "image": "https://i.ibb.co/DfS26dN/modern-luxury-hotel-bedroom-1546441686-902ef0693141a16f48dc9d1a861d52f7.jpg",
+        "special_offer": "15% off for advance bookings"
+    },
+    {
+        "name": "Executive Suite",
+        "description": "Indulge in luxury in our Executive Suite, featuring a separate living area, stunning views, and personalized service.",
+        "price_per_night": 1200,
+        "room_size": "Suite",
+        "availability": "Available",
+        "image": "https://i.ibb.co/9b4d8B9/modern-luxury-hotel-suite-1546441655-9a1fc8d6c3bb868ebc9e68266741e94f.jpg",
+        "special_offer": ""
+    },
+    {
+        "name": "Family Room",
+        "description": "Enjoy a comfortable stay with your family in our spacious Family Room, equipped with modern amenities and cozy furnishings.",
+        "price_per_night": 1000,
+        "room_size": "Family",
+        "availability": "Available",
+        "image": "https://i.ibb.co/z5drr3B/modern-hotel-family-room-1546441706-fce29f51b03a74b30230c028edf43336.jpg",
+        "special_offer": ""
+    },
+    {
+        "name": "Luxury Penthouse",
+        "description": "Experience ultimate luxury in our Luxury Penthouse, featuring panoramic views, private terrace, and personalized services.",
+        "price_per_night": 2500,
+        "room_size": "Penthouse",
+        "availability": "Available",
+        "image": "https://i.ibb.co/RQXbTN0/modern-luxury-penthouse-suite-1546441658-e9676e1915d7555005c6a6a778a0d2f3.jpg",
+        "special_offer": ""
+    },
+    {
+        "name": "Standard Room",
+        "description": "Relax and unwind in our comfortable Standard Room, perfect for business or leisure travelers.",
+        "price_per_night": 400,
+        "room_size": "Standard",
+        "availability": "Available",
+        "image": "https://i.ibb.co/qgBqyNM/modern-hotel-room-interior-1546441720-490c08c1d095e9f0d7b780af34f1ff13.jpg",
+        "special_offer": "5% off for returning guests"
+    },
+    {
+        "name": "Economy Room",
+        "description": "Enjoy a budget-friendly stay in our Economy Room, offering essential amenities for a comfortable accommodation.",
+        "price_per_night": 300,
+        "room_size": "Economy",
+        "availability": "Available",
+        "image": "https://i.ibb.co/9vY6Rz5/modern-hotel-economy-room-1546441674-7b6b70a64b1a0ed72b7a6b0c38912819.jpg",
+        "special_offer": ""
+    },
+    {
+        "name": "Luxury Villa",
+        "description": "Experience luxury living in our private Luxury Villa, featuring spacious interiors, private pool, and stunning views.",
+        "price_per_night": 3500,
+        "room_size": "Villa",
+        "availability": "Available",
+        "image": "https://i.ibb.co/QNqxD21/modern-luxury-villa-1546441642-187f8915a51370dfac3e624533bbcc14.jpg",
+        "special_offer": ""
+    },
+    {
+        "name": " Single Room",
+        "description": "Indulge in the comfort of our Cozy Single Room. This intimate space features modern amenities and a serene ambiance, perfect for a solo traveler.",
+        "price_per_night": 500,
+        "room_size": "Single",
+        "availability": "Available",
+        "image": "https://i.ibb.co/7SrS2C9/photo-1556438758-8d49568ce18e.jpg",
+        "special_offer": "10% off for bookings of 3 nights or more"
+    },
+    {
+        "name": "  Room suite",
+        "description": "Indulge in the comfort of our Cozy Single Room. This intimate space features modern amenities and a serene ambiance, perfect for a solo traveler.",
+        "price_per_night": 5000,
+        "room_size": "Single",
+        "availability": "Available",
+        "image": "https://i.ibb.co/vYYNpts/photo-1598928506311-c55ded91a20c.jpg",
+        "special_offer": "10% off for bookings of 3 nights or more"
+    },
+    {
+        "name": " Deluxe Room",
+        "description": "Indulge in the comfort of our Cozy Single Room. This intimate space features modern amenities and a serene ambiance, perfect for a solo traveler.",
+        "price_per_night": 500,
+        "room_size": "Single",
+        "availability": "Available",
+        "image": "https://i.ibb.co/tMncD7Z/photo-1522708323590-d24dbb6b0267.jpg",
+        "special_offer": "10% off for bookings of 3 nights or more"
     }
 ]

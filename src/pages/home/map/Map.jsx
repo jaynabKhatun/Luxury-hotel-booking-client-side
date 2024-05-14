@@ -33,7 +33,8 @@ const Map = () => {
     return (
 
         <div>
-            <h1 className='text-4xl text-center mt-20 mb-6 font-mim font-bold' data-aos="zoom-in"> Our Location</h1>
+            <h1 className='text-4xl bg-base-200 text-center mt-20 mb-6 font-mim font-bold' data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"> Our Location</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
 
                 <div className='flex justify-center items-center' data-aos="flip-left"

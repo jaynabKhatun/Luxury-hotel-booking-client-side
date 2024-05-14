@@ -61,7 +61,7 @@ const RoomDetailsPage = () => {
                         showConfirmButton: false,
                         timer: 1500
                     })
-                    navigate('/')
+                    navigate('/bookings')
                 } else {
                     Swal.fire({
                         icon: 'error',

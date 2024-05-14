@@ -27,8 +27,16 @@ const SingleBooking = ({ booking, handleCancelBooking }) => {
         <div className="mt-8 mb-8">
             <div className="card card-side  bg-base-100 p-2 hover:scale-105 transition hover:border-green-600  shadow-xl border " data-aos="fade-up"
                 data-aos-duration="3000">
+
+
                 <figure><img className="hover:scale-x-110 w-80" src={images} alt="Movie" /></figure>
-                <div className="card-body ">
+
+
+                <div className="card-body relative">
+
+                    <Link to={'/review'}><button  className='absolute right-4 top-2 p-4  badge-primary badge '>Give Review</button></Link>
+
+
                     <h2 className="card-title font-mim text-2xl hover:scale-105" >{service_name}</h2>
                     <p className="badge badge-accent hover:scale-105 text-white p-4 font-bold" data-aos="fade-up-right">Booked Date :{date}</p>
                     <p className="badge badge-secondary hover:scale-105 text-white p-4 font-bold" data-aos="fade-up-left">Price : ${price}</p>
@@ -39,6 +47,7 @@ const SingleBooking = ({ booking, handleCancelBooking }) => {
                         <Link to={`/updateBookings/${_id}`}><button className="btn btn-primary" data-aos="fade-up-left">Update</button></Link>
 
                         <button onClick={() => handleCancelBooking(_id)} className="btn btn-error" data-aos="fade-down-right">Cancel</button>
+
                     </div>
                 </div>
             </div>
