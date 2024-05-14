@@ -7,7 +7,7 @@ const Testimonial = () => {
     
 
     const [reviews, setReviews] = useState([]);
-    console.log(reviews);
+    // console.log(reviews);
 
     useEffect(() => {
         fetch('http://localhost:5000/review')

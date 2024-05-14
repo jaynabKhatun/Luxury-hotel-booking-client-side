@@ -5,7 +5,7 @@ import SingleRoom from "./SingleRoom";
 
 const Cards = () => {
     const [rooms, setRooms] = useState();
-    console.log(rooms);
+    // console.log(rooms);
 
 
     useEffect(() => {

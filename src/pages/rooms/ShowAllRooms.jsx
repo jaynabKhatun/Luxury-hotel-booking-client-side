@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import propTypes from 'prop-types'
 
 
 const ShowAllRooms = ({ room }) => {
-    console.log(room);
-    const { _id, image, price_per_night,name,availability } = room;
+    // console.log(room);
+    const { _id, image, price_per_night, name, availability } = room;
     return (
 
         <Link to={`/roomDetailsPage/${_id}`} className="flex flex-col  mt-8 font-mim items-center justify-center w-full max-w-sm mx-auto" data-aos="flip-left"
@@ -24,5 +25,9 @@ const ShowAllRooms = ({ room }) => {
         </Link>
     );
 };
+
+ShowAllRooms.propTypes = {
+    room: propTypes.object.isRequired,
+}
 
 export default ShowAllRooms;

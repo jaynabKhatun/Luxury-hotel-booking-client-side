@@ -27,7 +27,7 @@ const UpdateBookings = () => {
 
     const handleUpdateBooking = (e) => {
         e.preventDefault()
-        console.log('pressd')
+        // console.log('pressd')
 
         const form = e.target
         const name = form.service_name.value;
@@ -38,7 +38,7 @@ const UpdateBookings = () => {
         const date = form.date.value;
         const updateBookings = { email, price, room_size, availability, date, service_name, name }
 
-        console.log(updateBookings);
+        // console.log(updateBookings);
 
         //update single booking information
         fetch(`http://localhost:5000/bookings/${_id}`, {

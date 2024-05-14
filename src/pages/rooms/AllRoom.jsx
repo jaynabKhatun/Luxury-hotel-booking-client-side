@@ -4,7 +4,7 @@ import ShowAllRooms from "./ShowAllRooms";
 
 const AllRoom = () => {
     const [rooms, setRooms] = useState([]);
-    console.log(rooms);
+    // console.log(rooms);
     useEffect(() => {
         fetch('http://localhost:5000/rooms')
             .then(res => res.json())

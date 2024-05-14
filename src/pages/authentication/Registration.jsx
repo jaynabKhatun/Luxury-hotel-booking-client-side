@@ -30,7 +30,7 @@ const Registration = () => {
         const email = form.email.value;
         const password = form.password.value;
         const newUser = { name, photo, email, password };
-        console.log(newUser);
+        // console.log(newUser);
         if (password.length < 6) {
             toast.error('Password must be at least 6 characters')
             return
@@ -51,7 +51,7 @@ const Registration = () => {
             navigate('/')
             toast.success('Signup Successful')
         } catch (err) {
-            console.log(err)
+            // console.log(err)
             toast.error(err?.message)
         }
     }

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const Review = () => {
     const { user } = useContext(AuthContext);
-    console.log(user);
+    // console.log(user);
     const navigate = useNavigate()
 
 
@@ -21,7 +21,7 @@ const Review = () => {
         const rev = form.rev.value;
 
         const review = { username, email, rating, time, photo, rev }
-        console.log(review);
+        // console.log(review);
 
         //add review to database
         fetch('http://localhost:5000/review', {

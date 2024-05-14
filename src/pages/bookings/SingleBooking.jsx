@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 
 const SingleBooking = ({ booking, handleCancelBooking }) => {
-    console.log(booking);
+    // console.log(booking);
 
 
 

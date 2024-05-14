@@ -38,7 +38,7 @@ const RoomDetailsPage = () => {
             images: image,
             service_name: name
         };
-        console.log(newBooking);
+        // console.log(newBooking);
 
 
         //insert new booking on mongodb

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'; 
 
 const SingleTest = ({ review }) => {
-    console.log(review);
+    // console.log(review);
     const { photo, username,time,rev, rating} = review;
     return (
         <div className="container flex flex-col w-full border max-w-lg p-6 mx-auto divide-y rounded-md dark:divide-gray-300 bg-base-200 dark:text-gray-800" data-aos="flip-left">

@@ -21,7 +21,7 @@ const Bookings = () => {
 
     //handle delete booking
     const handleCancelBooking = (id) => {
-        console.log(id);
+        // console.log(id);
 
         Swal.fire({
             title: "Are you sure?",

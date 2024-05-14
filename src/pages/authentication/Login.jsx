@@ -6,6 +6,8 @@ import 'aos/dist/aos.css';
 import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../provider/AuthProvider";
 import toast from "react-hot-toast";
+import axios from "axios";
+
 
 
 const Login = () => {
@@ -35,10 +37,17 @@ const Login = () => {
         //Log in user
         signIn(email, password)
             .then(result => {
-                console.log(result.user)
+                const loggedinUser = (result.user)
+                console.log(loggedinUser)
                 toast.success('Login Successfull')
+                const user = { email }
 
-                navigate(location?.state ? location?.state : '/')
+                // navigate(location?.state ? location?.state : '/')
+                // get access token
+                axios.post('http://localhost:5000/jwt', user)
+                    .then(res => {
+                        console.log(res.data)
+                    })
 
 
             })
@@ -51,7 +60,7 @@ const Login = () => {
     }
 
     const handleGoogleLogin = () => {
-        console.log('Google Login');
+        // console.log('Google Login');
         signInWithGoogle()
             .then(result => {
                 console.log(result.user)
