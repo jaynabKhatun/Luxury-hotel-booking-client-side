@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
 
 const SingleRoom = ({ room }) => {
+   
 
     useEffect(() => {
         AOS.init({
@@ -12,6 +13,7 @@ const SingleRoom = ({ room }) => {
             once: false,
         })
     }, [])
+
     const { _id,image, availability, name, price_per_night } = room;
 
     return (

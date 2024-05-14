@@ -91,7 +91,7 @@ const Registration = () => {
                         <label className="label">
                             <span className="label-text">Photo</span>
                         </label>
-                        <input type="text" placeholder="photo Url" name="photo" className="input input-bordered" required />
+                        <input type="text" placeholder="photo Url" name="photo" className="input input-bordered"/>
                     </div>
                     <div className="form-control" data-aos="fade-up">
                         <label className="label">
