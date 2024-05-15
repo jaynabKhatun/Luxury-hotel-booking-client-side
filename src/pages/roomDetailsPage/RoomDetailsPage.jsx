@@ -33,12 +33,15 @@ const RoomDetailsPage = () => {
         const email = user?.email;
 
         const newBooking = {
-            price, room_size, availability, date, email,
+            price, room_size, 
+            availability,
+             date,
+              email,
             service_id: _id,
             images: image,
             service_name: name
         };
-        // console.log(newBooking);
+        console.log(newBooking);
 
 
         //insert new booking on mongodb

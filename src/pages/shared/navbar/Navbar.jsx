@@ -45,11 +45,11 @@ const Navbar = () => {
                         <NavLink to={'/'}>Home</NavLink>
                     </li>
 
-                    {
-                        user && <li>
-                            <NavLink to={'/rooms'}>Rooms</NavLink>
-                        </li>
-                    }
+
+                    <li>
+                        <NavLink to={'/rooms'}>Rooms</NavLink>
+                    </li>
+
                     {
                         user && <li>
                             <NavLink to={'/bookings'}>My Bookings</NavLink>
@@ -63,50 +63,50 @@ const Navbar = () => {
                 </ul>
 
                 {
-                        user && <div className='dropdown dropdown-end z-50'>
-                            <div
-                                tabIndex={0}
-                                role='button'
-                                className='btn btn-ghost btn-circle avatar'
+                    user && <div className='dropdown dropdown-end z-50'>
+                        <div
+                            tabIndex={0}
+                            role='button'
+                            className='btn btn-ghost btn-circle avatar'
+                        >
+                            <div title={user?.displayName}
+                                className='w-10 rounded-full'
                             >
-                                <div title={user?.displayName}
-                                    className='w-10 rounded-full'
-                                >
-                                    <img
-                                        referrerPolicy='no-referrer'
-                                        alt='User Profile Photo'
-                                        src={user?.photoURL}
-                                    />
-                                </div>
+                                <img
+                                    referrerPolicy='no-referrer'
+                                    alt='User Profile Photo'
+                                    src={user?.photoURL}
+                                />
                             </div>
-                            <ul
-                                tabIndex={0}
-                                className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'
-                            >
-                                <li>
-                                    <div className='justify-between'>Add Job</div>
-                                </li>
-                                <li>
-                                    <div>My Posted Jobs</div>
-                                </li>
-                                <li>
-                                    <div>My Bids</div>
-                                </li>
-                                <li>
-                                    <div>Bid Requests</div>
-                                </li>
-                                <li className='mt-2'>
-                                    <button onClick={handleLogOut} className='bg-gray-200 block text-center'>Logout</button>
-                                </li>
-                            </ul>
                         </div>
-                    }
+                        <ul
+                            tabIndex={0}
+                            className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'
+                        >
+                            <li>
+                                <div className='justify-between'>Add Job</div>
+                            </li>
+                            <li>
+                                <div>My Posted Jobs</div>
+                            </li>
+                            <li>
+                                <div>My Bids</div>
+                            </li>
+                            <li>
+                                <div>Bid Requests</div>
+                            </li>
+                            <li className='mt-2'>
+                                <button onClick={handleLogOut} className='bg-gray-200 block text-center'>Logout</button>
+                            </li>
+                        </ul>
+                    </div>
+                }
             </div>
         </div>
 
 
 
-        
+
     );
 };
 

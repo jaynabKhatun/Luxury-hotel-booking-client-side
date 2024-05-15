@@ -16,7 +16,7 @@ const Bookings = () => {
             .then(data => setBookings(data))
     }
 
-        , [])
+        , [url])
 
 
 
@@ -66,7 +66,7 @@ const Bookings = () => {
             <button className="badge badge-warning mt-3 text-white font-bold p-3">Total Bookings: {bookings.length}</button>
             <div >
                 {
-                    bookings.map(booking =>
+                    bookings?.map(booking =>
                         <SingleBooking
                             key={booking._id}
                             handleCancelBooking={handleCancelBooking}

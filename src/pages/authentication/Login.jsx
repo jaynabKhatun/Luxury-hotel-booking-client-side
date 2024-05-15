@@ -10,6 +10,7 @@ import axios from "axios";
 
 
 
+
 const Login = () => {
 
 
@@ -66,10 +67,23 @@ const Login = () => {
         // console.log('Google Login');
         signInWithGoogle()
             .then(result => {
+
                 console.log(result.user)
+                axios.post('http://localhost:5000/jwt')
+                    .then(res => {
+                        console.log(res.data)
+                        if (res.data.success) {
+                            navigate(location?.state ? location?.state : '/')
+                        }
+                    })
+
+
 
                 toast.success('Login Successfull')
+
+
                 navigate('/')
+
             })
             .catch(error => {
                 console.log(error.message)
