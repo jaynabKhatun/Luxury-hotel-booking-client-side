@@ -40,9 +40,11 @@ const Login = () => {
             .then(result => {
 
                 console.log(result.user)
-                toast.success('Login Successfull')
+
 
                 navigate(location?.state ? location?.state : '/');
+                toast.success('Login Successfull')
+                
 
 
                 // get access token
@@ -79,6 +81,7 @@ const Login = () => {
                 navigate('/')
 
             })
+            
             .catch(error => {
                 console.log(error.message)
             })

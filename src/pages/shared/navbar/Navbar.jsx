@@ -83,18 +83,10 @@ const Navbar = () => {
                             tabIndex={0}
                             className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'
                         >
-                            <li>
-                                <div className='justify-between'>Add Job</div>
-                            </li>
-                            <li>
-                                <div>My Posted Jobs</div>
-                            </li>
-                            <li>
-                                <div>My Bids</div>
-                            </li>
-                            <li>
-                                <div>Bid Requests</div>
-                            </li>
+
+
+
+
                             <li className='mt-2'>
                                 <button onClick={handleLogOut} className='bg-gray-200 block text-center'>Logout</button>
                             </li>
