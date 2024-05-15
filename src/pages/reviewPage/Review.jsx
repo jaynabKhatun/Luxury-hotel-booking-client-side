@@ -24,7 +24,7 @@ const Review = () => {
         // console.log(review);
 
         //add review to database
-        fetch('http://localhost:5000/review',  {
+        fetch('https://hotel-server-blond.vercel.app/review',  {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../provider/AuthProvider";
 import toast from "react-hot-toast";
-import axios from "axios";
+
 
 
 
@@ -38,20 +38,23 @@ const Login = () => {
         //Log in user
         signIn(email, password)
             .then(result => {
-                const loggedinUser = (result.user)
-                console.log(loggedinUser)
+
+                console.log(result.user)
                 toast.success('Login Successfull')
-                const user = { email }
+
+                navigate(location?.state ? location?.state : '/');
 
 
                 // get access token
-                axios.post('http://localhost:5000/jwt', user, { withCredentials: true })
-                    .then(res => {
-                        console.log(res.data)
-                        if (res.data.success) {
-                            navigate(location?.state ? location?.state : '/')
-                        }
-                    })
+                // axios.post('https://hotel-server-blond.vercel.app/jwt', user, { withCredentials: true })
+                //     .then(res => {
+                //         console.log(res.data)
+                //         if (res.data.success) {
+
+
+
+                //         }
+                //     })
 
 
             })
@@ -67,16 +70,7 @@ const Login = () => {
         // console.log('Google Login');
         signInWithGoogle()
             .then(result => {
-
                 console.log(result.user)
-                axios.post('http://localhost:5000/jwt')
-                    .then(res => {
-                        console.log(res.data)
-                        if (res.data.success) {
-                            navigate(location?.state ? location?.state : '/')
-                        }
-                    })
-
 
 
                 toast.success('Login Successfull')

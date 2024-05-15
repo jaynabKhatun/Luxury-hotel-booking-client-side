@@ -10,7 +10,7 @@ const Testimonial = () => {
     // console.log(reviews);
 
     useEffect(() => {
-        fetch('http://localhost:5000/review')
+        fetch('https://hotel-server-blond.vercel.app/review')
             .then(res => res.json())
             .then(data => {
                 setReviews(data)

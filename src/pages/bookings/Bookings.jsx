@@ -8,7 +8,7 @@ const Bookings = () => {
     const { user } = useContext(AuthContext);
     const [bookings, setBookings] = useState([]);
 
-    const url = `http://localhost:5000/bookings?email=${user?.email}`
+    const url = `https://hotel-server-blond.vercel.app/bookings?email=${user?.email}`
 
     useEffect(() => {
         fetch(url, { credentials: "include" })
@@ -31,12 +31,12 @@ const Bookings = () => {
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, delete it!"
+            confirmButtonText: "Yes, cancel it!"
         }).then((result) => {
 
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/bookings/${id}`, {
+                fetch(`https://hotel-server-blond.vercel.app/bookings/${id}`, {
                     method: "DELETE"
                 })
 
@@ -45,7 +45,7 @@ const Bookings = () => {
                         if (data.deletedCount > 0) {
                             Swal.fire(
                                 "Deleted!",
-                                "Your file has been deleted.",
+                                "Your file has been canceled.",
                                 "success"
                             );
                             setBookings(bookings.filter(booking => booking._id !== id))
