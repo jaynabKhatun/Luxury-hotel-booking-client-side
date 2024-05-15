@@ -9,8 +9,9 @@ const Bookings = () => {
     const [bookings, setBookings] = useState([]);
 
     const url = `http://localhost:5000/bookings?email=${user?.email}`
+
     useEffect(() => {
-        fetch(url)
+        fetch(url, { credentials: "include" })
             .then(res => res.json())
             .then(data => setBookings(data))
     }
@@ -58,7 +59,7 @@ const Bookings = () => {
 
     }
 
-   
+
 
     return (
         <div className="min-h-[calc(100vh-88px)]">
@@ -70,7 +71,7 @@ const Bookings = () => {
                             key={booking._id}
                             handleCancelBooking={handleCancelBooking}
                             booking={booking}
-                          
+
                         >
 
 
