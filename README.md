@@ -20,9 +20,7 @@ The **Heritage Luxury Hotel** website offers a luxurious and user-friendly platf
   - **Sign Up**: Allows new users to create an account to manage their bookings.
 
 ![Room Management](https://i.ibb.co/6yyJvzL/screencapture-herritage-1b537-web-app-room-Details-Page-6641ff75364127f7a5694ec3-2024-08-28-23-39-36.png)
-![Room Management](https://i.ibb.co/y85HX2H/screencapture-herritage-1b537-web-app-update-Bookings-66cf60bb7e493b45860a52b1-2024-08-28-23-40-17.png)
-![Room Management](https://i.ibb.co/mRBpp6q/screencapture-herritage-1b537-web-app-rooms-2024-08-28-23-39-16.png)
-![Room Management](./images/room-management.png)
+)
 *Image: Room Management System*
 
 - **Room Management**:
