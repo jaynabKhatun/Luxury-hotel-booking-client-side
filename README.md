@@ -54,7 +54,7 @@ e*
 
 ## **License**
 
-This project is licensed under the **MIT License**.
+This project is licensed under the **jaynab Binte Azad**.
 
 
 
