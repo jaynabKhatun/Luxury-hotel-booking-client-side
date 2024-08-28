@@ -2,7 +2,6 @@
 
 **Live Site URL**: [https://herritage-1b537.web.app](https://herritage-1b537.web.app) 
 
-![overview](https://i.ibb.co/sqqpwJT/screencapture-herritage-1b537-web-app-2024-08-29-00-12-46.png)
 
 ## **Overview**
 
